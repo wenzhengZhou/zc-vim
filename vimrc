@@ -4,6 +4,17 @@ set wildmode=longest,list " Ex命令自动补全采用bash方式"
 syntax on
 filetype plugin indent on
 
+"中文乱码问题
+set fileencodings=utf-8,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
+
+"win32系统,gvim menu 乱码修复
+if has("win32")
+	source $VIMRUNTIME/delmenu.vim
+	source $VIMRUNTIME/menu.vim
+	language messages zh_CN.utf-8
+endif
 
 "不自动折行
 set nowrap
