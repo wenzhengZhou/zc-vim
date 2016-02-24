@@ -5,11 +5,20 @@ syntax on
 filetype plugin indent on
 
 
+"不自动折行
+set nowrap
+
+"配色
 set t_Co=256
 set background=dark
 colorscheme molokai
 
 set cursorline
+
+"statusline
+set statusline=[%F]%y%r%m%*%=[%l/%L,%c][%p%%]
+set laststatus=2
+
 
 map <C-n> :NERDTree<CR>
 
